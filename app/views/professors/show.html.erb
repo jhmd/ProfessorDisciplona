@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Login:</strong>
+  <%= @professor.login %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @professor.email %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @professor.nome %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @professor.cpf %>
+</p>
+<p>
+  <strong>disciplinas:</strong>
+
+ <% @professor.disciplinas.each do |disciplina| %>
+    <%= disciplina.nome %>  |
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_professor_path(@professor) %> |
+<%= link_to 'Back', professors_path %>
